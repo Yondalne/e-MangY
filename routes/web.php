@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Controller routes
-Route::get('/home', [Controller::class, 'home']);
+Route::get('/', [Controller::class, 'home']);
 Route::get('/contactUs', [Controller::class, 'contactUs']);
 
 Route::get('/userDashboard', [Controller::class, 'dashboard'])->middleware('auth');

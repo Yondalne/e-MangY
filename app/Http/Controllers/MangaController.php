@@ -54,7 +54,7 @@ class MangaController extends Controller
     public function create()
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         if(auth()->user()->admin != 1){
@@ -71,7 +71,7 @@ class MangaController extends Controller
     public function store(Request $request)
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         if(auth()->user()->admin != 1){
@@ -114,7 +114,7 @@ class MangaController extends Controller
     public function edit($id)
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         if(auth()->user()->admin != 1){
@@ -132,7 +132,7 @@ class MangaController extends Controller
     public function update(Request $request, $id)
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         if(auth()->user()->admin != 1){

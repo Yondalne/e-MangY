@@ -18,11 +18,11 @@
             <div><a href="/adminManage">Utilisateurs</a></div>
         @endif
         <div><a href="/profil">Modifier Profil</a></div>
-        <div><a href="/home">Revenir sur le site</a></div>
+        <div><a href="/">Revenir sur le site</a></div>
         <div><a href="/signOut">Deconnexion</a></div>
     </nav>
 
     <div class="logo">
-        <a href="/home"><img src="{{asset('assets/LogoAdmin.png')}}" alt=""></a>
+        <a href="/"><img src="{{asset('assets/LogoAdmin.png')}}" alt=""></a>
     </div>
 </div>

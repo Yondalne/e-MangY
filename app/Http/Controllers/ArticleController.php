@@ -10,7 +10,7 @@ class ArticleController extends Controller
     public function create()
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         return view('user.dashboard.newPost')->with(['pageTitle' => 'Dashboard - New Post','user' => auth()->user()]);
@@ -19,7 +19,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         $user = auth()->user();
@@ -48,7 +48,7 @@ class ArticleController extends Controller
     public function edit($id)
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         return view('user.dashboard.modifyPost')->with([
@@ -61,7 +61,7 @@ class ArticleController extends Controller
     public function update(Request $request, $id)
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         $user = auth()->user();

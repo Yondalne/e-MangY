@@ -1,11 +1,11 @@
 <div class="navBar">
 
     <div class="logo">
-        <a href="/home"><img src="{{asset('assets/LogoAdmin.png')}}" alt=""></a>
+        <a href="/"><img src="{{asset('assets/LogoAdmin.png')}}" alt=""></a>
     </div>
 
     <nav>
-        <div><a href="/home">Acceuil</a></div>
+        <div><a href="/">Acceuil</a></div>
         <div><a href="/mangas">Mangas</a></div>
         <div><a href="/contactUs">Nous Contacter</a></div>
         @if (!empty($user))

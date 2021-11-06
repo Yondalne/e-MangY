@@ -99,7 +99,7 @@ class UserController extends Controller
     {
 
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         $user = User::find($id);
@@ -128,7 +128,7 @@ class UserController extends Controller
     {
 
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         $user = User::find($id);
@@ -162,7 +162,7 @@ class UserController extends Controller
     {
 
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         $user = User::find($id);
@@ -227,7 +227,7 @@ class UserController extends Controller
     public function updateWallpaper(Request $request, $id)
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         $user = User::find($id);

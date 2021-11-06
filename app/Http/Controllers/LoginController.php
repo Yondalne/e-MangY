@@ -33,7 +33,7 @@ class LoginController extends Controller
     public function logout(Request $request){
 
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         Auth::logout();

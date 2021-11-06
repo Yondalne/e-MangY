@@ -31,7 +31,7 @@ class Controller extends BaseController
     public function dashboard()
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
         // dd(auth()->user()->articles());
         return view('user.dashboard.home')->with(['pageTitle' => 'Dashboard - Home', 'user'=> auth()->user()]);
@@ -41,7 +41,7 @@ class Controller extends BaseController
     {
 
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
         return view('user.dashboard.profil')->with(['pageTitle' => 'Dashboard - Profil', 'user'=> auth()->user()]);
     }
@@ -50,7 +50,7 @@ class Controller extends BaseController
     {
 
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
         // if(auth()->user()->admin == 1){
         //     $articles = Article::paginate(6);
@@ -67,7 +67,7 @@ class Controller extends BaseController
     public function adminGestUser()
     {
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         if(auth()->user()->admin != 1){
@@ -85,7 +85,7 @@ class Controller extends BaseController
     {
 
         if(auth()->user()->isBan == 1) {
-            return redirect('/home')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
+            return redirect('/')->withErrors(['message' => "Vous avez ete banni temporairement veuillez nous contacter"]);
         }
 
         if(auth()->user()->admin != 1){
@@ -100,6 +100,6 @@ class Controller extends BaseController
 
     public function sendMail()
     {
-        return redirect('/home');
+        return redirect('/');
     }
 }
