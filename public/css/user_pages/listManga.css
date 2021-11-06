@@ -1,0 +1,105 @@
+.mainPart {
+    font-family: "Overpass";
+    color: white;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.mainPart h2 {
+    font-size: xx-large;
+    border-bottom: solid 3px #FE3E57;
+}
+
+.recent {
+    margin-top: 120px;
+    width: 75%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.recent form{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.recent form select {
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px 17px;
+    outline: none;
+}
+
+.recent form option {
+    background-color: black;
+}
+
+.recent form input[type='submit'] {
+    background-color: #A70048;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: 'Overpass';
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.recent .allPost {
+    display: grid;
+    height: 90%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 25% 25% 25%;
+    grid-gap: 50px 50px;
+    margin: 60px;
+}
+
+.Post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
+    border: solid 1px white;
+}
+
+.Post img {
+    width: auto;
+    height: 100%;
+}
+
+.Post .postContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+}
+
+.Post .postContent .title {
+    color: white;
+    background-color: #A70048;
+    text-align: center;
+    height: 25%;
+    z-index: 2;
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 15px 0 0;
+}
+
+.Post .postContent .title a{
+    border: none;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.superContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    background-color: #100021;
+}
+
+.navBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #A70048;
+    height: 100px;
+    font-size: 18px;
+    font-family: "Overpass";
+}
+
+.navBar .logo {
+    position: absolute;
+    top: 35px;
+    left: 50px;
+}
+
+.navBar .logo img {
+    width: 120px;
+    height: auto;
+}
+
+.navBar nav {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navBar nav a {
+    color: #F7E8C9;
+    text-decoration: none;
+}
+
+.navBar nav .log {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.navBar .user {
+    color: #F7E8C9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    vertical-align: baseline;
+}
+
+.navBar .user div {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin-right: 15px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.navBar .user img {
+    width: auto;
+    height: 143%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.navBar .user h2 {
+    font-size: 16px;
+}

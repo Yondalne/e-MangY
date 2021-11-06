@@ -1,0 +1,141 @@
+.mainPart {
+    font-family: "Overpass";
+    color: white;
+    width: 100vw;
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.manga {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 60px;
+}
+
+.currentManga {
+    background-color: #1C013B;
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.manga .photo {
+    background-color: #A70048;
+    width: 40%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.manga .photo img{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.synopsis {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.synopsis h2 {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #A70048;
+    padding: 15px 25px;
+    border-radius: 0 0 8px 8px;
+}
+
+.synopsis .textSyn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0 70px;
+}
+
+.synopsis .textSyn p {
+    margin-top: 20px;
+}
+
+.synopsis .categoriesOptions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 60px;
+    padding: 0 70px;
+}
+
+.synopsis .categoryOption{
+    height: 25px;
+    padding: 0 20px;
+    background-color: #A70048;
+    color: white;
+    border: none;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    margin-top: 100px;
+    margin-right: 100px;
+    text-align: right;
+}
+
+.link a{
+    margin-top: 100px;
+    color: coral;
+}
+
+.listManga {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 15%;
+    background-color: aliceblue;
+    color: black;
+    list-style: none;
+}
+
+.listManga h4 {
+    height: 60px;
+    width: 100%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A70048;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.listManga li {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    border-top: #A70048 solid 2px;
+}
+
+.listManga a {
+    text-decoration: none;
+    color: black;
+}

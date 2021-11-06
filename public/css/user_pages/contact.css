@@ -1,0 +1,65 @@
+.mainPart {
+    font-family: "Overpass";
+    color: white;
+    width: 100vw;
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mainPart h1 {
+    margin-top: 150px;
+}
+
+.form {
+    margin-top: 50px;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form form input, textarea {
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-family: "Overpass";
+}
+
+textarea {
+    padding: 50px 50px;
+}
+
+.form form input[type="email"] {
+    height: 60px;
+    padding-left: 100px;
+}
+
+.form form input[type="text"] {
+    height: 500px;
+}
+
+.form form input[type='submit'] {
+    margin-top: 20px;
+    background-color: #A70048;
+    color: white;
+    padding: 12px 17px;
+    font-size: 14px;
+    font-family: 'Overpass';
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+

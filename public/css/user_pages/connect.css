@@ -1,0 +1,51 @@
+.formField {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.fields {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fields input {
+    width: 85%;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 1px;
+    border-color: rgb(148, 148, 148);
+    outline: none;
+    padding-left: 50px;
+}
+
+.formField input[type='submit'] {
+    margin-top: 30px;
+    background-color: #A70048;
+    color: white;
+    padding: 12px 17px;
+    font-size: 14px;
+    font-family: 'Overpass';
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.signIn {
+    text-align: center;
+}
+
+.signIn a {
+    color: #A70048;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+

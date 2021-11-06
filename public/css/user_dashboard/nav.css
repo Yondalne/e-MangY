@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass";
+}
+
+.superContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.navBar {
+    width: 17%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    background-color: #A70048;
+}
+
+.navBar .user {
+    color: #F7E8C9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    vertical-align: baseline;
+}
+
+.navBar .user div {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 10000px;
+    border: 2px solid white;
+}
+
+.navBar .user img {
+    width: auto;
+    height: 143%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.navBar .user h2 {
+    font-size: 16px;
+}
+
+.navBar nav{
+    font-size: 20px;
+    font-weight: normal;
+    display: flex;
+    height: 30%;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 130px;
+}
+
+.navBar a{
+    text-decoration: none;
+    list-style: none;
+    color: #F7E8C9;
+}
+
+.navBar .logo {
+    margin: 0 auto;
+}
+
+.navBar .logo img {
+    width: 120px;
+    height: auto;
+}
+
+.aside {
+    position: relative;
+    display: flex;
+    width: 83%;
+    background-color: bisque;
+}
+
+.aside .bgImg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.aside .bgImg img {
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.aside .content{
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+

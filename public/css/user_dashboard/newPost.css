@@ -1,0 +1,173 @@
+.contentContainer {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+}
+
+.contentContent {
+    width: 100%;
+    height: 100%;
+}
+
+.contentContent h1 {
+    font-size: 60px;
+}
+
+.contentContent form {
+    width: 100%;
+    height: 90%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contentContent form .top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contentContent form .title {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contentContent form .title label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #F7E8C9;
+}
+
+.contentContent form .title input {
+    width: 75%;
+    height: 50px;
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding-left: 70px;
+    font-size: 20px;
+}
+
+.contentContent form .title input::placeholder{
+    color: rgba(156, 156, 156, 0.5);
+}
+
+.contentContent form .cover {
+    width: 200px;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contentContent form .cover label{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contentContent form .cover label:hover{
+    cursor: pointer;
+}
+
+.contentContent form .cover input {
+    display: none;
+}
+
+.contentContent form .cover img {
+    height: auto;
+    width: 100%;
+    background-color: white;
+}
+
+.contentContent form .categoriesOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin-top: 60px;
+}
+
+.contentContent form .categoryOption{
+    display: flex;
+    flex-direction: row;
+}
+
+.contentContent form .categoryOption input{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.contentContent form .articleContent{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 70%;
+    position: relative;
+}
+
+.contentContent form .articleContent label{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: purple;
+    border-radius: 8px 0 0 0;
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contentContent form .articleContent textarea{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    font-size: 18px;
+    padding: 60px 60px 20px 60px;
+    color: white;
+    background-color: #1C013B;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+.contentContent form input[type='submit'] {
+    margin-top: 20px;
+    background-color: #A70048;
+    color: white;
+    padding: 12px 17px;
+    font-size: 14px;
+    font-family: 'Overpass';
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.contentContent form input[type='submit']:hover{
+    cursor: pointer;
+}

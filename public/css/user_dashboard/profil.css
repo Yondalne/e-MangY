@@ -1,0 +1,259 @@
+.aside .content {
+    background-color: rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(15px);
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.layoutInfo {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.forms {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.perso {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.forms input[type="submit"] {
+    margin-top: 20px;
+}
+
+.forms .header {
+    padding: 15px 0;
+    width: 60%;
+    text-align: center;
+    border-radius: 10px;
+    border-top: solid 4px #FE3E57;
+    border-bottom: solid 4px #FE3E57;
+    position: relative;
+}
+
+.forms .header::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    bottom: -10px;
+    left: 50%;
+    border: solid 2px white;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    background-color: #A70048;
+}
+
+.info {
+    display: flex;
+    width: 80%;
+    height: 85%;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: column;
+}
+
+.info .line {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line .inputContainer {
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    text-align: left;
+    color: #F7E8C9;
+    margin: 0 40px;
+}
+
+.line .inputContainer input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: rgb(231, 231, 231);
+    outline: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.photoContent label {
+    padding: 12px 17px;
+    color: white;
+    font-family: 'Overpass';
+    font-weight: bold;
+}
+
+.layoutPhoto {
+    display: flex;
+    height: 100%;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.layoutPhoto form{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.layoutPhoto .photoContent {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.layoutPhoto .photoContent .img {
+    width: 70%;
+    height: 95%;
+    overflow: hidden;
+    border: 2px solid white;
+    position: relative;
+}
+
+.layoutPhoto .photoContent .inputContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.layoutPhoto .photoContent .inputContainer input{
+    display: none;
+}
+
+.layoutPhoto .photoContent .inputContainer label {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.layoutPhoto .photoContent .inputContainer label:hover {
+    cursor: pointer;
+}
+
+.photoContent .img img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.layout input[type='submit'] {
+    background-color: #A70048;
+    color: white;
+    padding: 12px 17px;
+    font-size: 14px;
+    font-family: 'Overpass';
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.layout input[type='submit']:hover {
+    cursor: pointer;
+}
+
+.popUp {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-58.5%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popUpContainer {
+    padding: 10px 30px;
+    width: 60%;
+    height: 80%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.popUpContent {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.uploadImg {
+    width: 70%;
+    border: black solid 1px;
+}
+
+.uploadImg img{
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.preview {
+    width: 20%;
+    height: 45%;
+    border: black solid 1px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.cropper-view-box, .cropper-face {
+    border-radius: 50%;
+}
