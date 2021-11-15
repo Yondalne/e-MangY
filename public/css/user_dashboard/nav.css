@@ -79,6 +79,7 @@
 .navBar .logo img {
     width: 120px;
     height: auto;
+    box-shadow: 5px 10px 25px #1C013B;
 }
 
 .aside {
@@ -99,7 +100,7 @@
 
 .aside .bgImg img {
     height: auto;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
 }
 

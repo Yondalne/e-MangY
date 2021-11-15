@@ -20,7 +20,14 @@ class Controller extends BaseController
     public function home()
     {
         // dd(auth()->user());
-        return view('user.pages.home')->with(['pageTitle' => 'Home', 'user'=> auth()->user()]);
+        $admin = User::where("admin", "=", 1)->first();
+        // dd($admin->articles);
+        return view('user.pages.home')->with([
+            'pageTitle' => 'Home',
+            'user'=> auth()->user(),
+            'news'=> $admin->articles,
+            'hot' => Article::all()
+        ]);
     }
 
     public function contactUs()

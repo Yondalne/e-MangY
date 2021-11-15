@@ -82,7 +82,7 @@ class MangaController extends Controller
             "title" => "required",
             "synopsis" => "required",
             "category" => "required",
-            "link" => "require",
+            "link" => "required",
             "img" => "required|mimes:png,jpg,jpeg",
         ]);
 
@@ -102,6 +102,7 @@ class MangaController extends Controller
             'title' => $request->title,
             'synopsis' => $request->synopsis,
             'img' => $pathCover,
+            'link' => $request->link
         ]);
 
         foreach($request->category as $key => $categoryId){

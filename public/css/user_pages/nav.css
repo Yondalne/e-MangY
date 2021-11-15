@@ -39,6 +39,7 @@
 .navBar .logo img {
     width: 120px;
     height: auto;
+    box-shadow: 5px 10px 25px #1C013B;
 }
 
 .navBar nav {
