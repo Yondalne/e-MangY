@@ -63,5 +63,5 @@ Route::get('/modify/{id}/Manga', [MangaController::class, 'edit'])->middleware('
 Route::patch('/updateManga/{id}', [MangaController::class, 'update'])->middleware('auth');
 Route::post('/createManga', [MangaController::class, 'store'])->middleware('auth');
 
-// Route::post('/sendMail', [Controller::class, 'sendMail']);
+Route::post('/sendMail', [Controller::class, 'sendMail']);
 // Route::get('/newCategory', [CategoryController::class, 'store'])->middleware('auth');

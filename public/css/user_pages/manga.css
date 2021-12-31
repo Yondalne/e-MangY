@@ -28,6 +28,7 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .manga .photo {
@@ -67,6 +68,9 @@
     flex-direction: column;
     margin-top: 50px;
     padding: 0 70px;
+    height: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .synopsis .textSyn p {
@@ -74,10 +78,12 @@
 }
 
 .synopsis .categoriesOptions {
+    position: absolute;
+    bottom: 80px;
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     padding: 0 70px;
 }
 
@@ -93,8 +99,9 @@
 }
 
 .link {
-    margin-top: 100px;
-    margin-right: 100px;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
     text-align: right;
 }
 

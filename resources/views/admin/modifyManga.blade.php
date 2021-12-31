@@ -35,32 +35,35 @@
                 </div>
                 <div class="categoriesOptions">
                     <h4>Modifier les categories:</h4>
-                    @foreach ($categories as $category)
-                        <div class="categoryOption">
-                            {{$verify = false}}
-                            {{-- Il y un bug qui fait apparaitre un chiffre a cote des input checked --}}
-                            @foreach ($category->mangas as $mangaCategory)
-                                @if ($mangaCategory->id === $manga->id)
-                                    {{$verify = true}}
-                                @endif
-                            @endforeach
+                    <div class="categoryOption">
+                        @foreach ($categories as $category)
+                            <div class="categoryOpt">
+                                {{$verify = false}}
+                                {{-- Il y un bug qui fait apparaitre un chiffre a cote des input checked --}}
+                                @foreach ($category->mangas as $mangaCategory)
+                                    @if ($mangaCategory->id === $manga->id)
+                                        {{$verify = true}}
+                                    @endif
+                                @endforeach
 
-                            @if ($verify)
-                                <input id="{{$category->label}}" type="checkbox" name="category[]" value="{{$category->id}}" checked>
-                            @else
-                                <input id="{{$category->label}}" type="checkbox" name="category[]" value="{{$category->id}}">
-                            @endif
-                            <label for="{{$category->label}}">{{$category->label}}</label>
-                        </div>
-                    @endforeach
+                                @if ($verify)
+                                    <input id="{{$category->label}}" type="checkbox" name="category[]" value="{{$category->id}}" checked>
+                                @else
+                                    <input id="{{$category->label}}" type="checkbox" name="category[]" value="{{$category->id}}">
+                                @endif
+                                <label for="{{$category->label}}">{{$category->label}}</label>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
 
                 <div class="articleContent">
                     <label for="content">Synopsis</label>
-                    <textarea name="synopsis" id="content" cols="30" rows="10">{{$manga->synopsis}}</textarea>
+                    <textarea  required name="synopsis" id="content" placeholder="Ecrivez le Synopsis ici">{{$manga->synopsis}}</textarea>
                 </div>
-                <div class="title" style="width: 90%; justify-content: flex-start; margin-top:20px;">
-                    <label style="font-size: 16px" for="link">Lien de lecture :</label>
+
+                <div class="title" style="width: 90%; justify-content: flex-start; margin-top: 30px;">
+                    <label style="font-size: 16px" for="link">Lien source :</label>
                     <input style="height: 40px; font-size: 16px; width: 500px; margin-left: 20px" required id="link" name="link" type="text" placeholder="Entrer le titre du manga" value="{{$manga->link}}">
                 </div>
 

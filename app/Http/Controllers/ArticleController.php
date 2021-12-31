@@ -75,9 +75,9 @@ class ArticleController extends Controller
             $extension = $request->file('coverImg')->getClientOriginalExtension();
             $name = "article".uniqid().".".$extension;
             $pathCover = "storage/".$request->file('coverImg')->storeAs('images/'.$user->id."/article", $name, "public");
+            $article->cover = $pathCover;
         }
 
-        $article->cover = $pathCover;
 
         if(!empty($request->title)){
             $article->title = $request->title;

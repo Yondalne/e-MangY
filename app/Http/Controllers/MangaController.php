@@ -80,7 +80,7 @@ class MangaController extends Controller
         // dd($request->category);
         $this->validate($request, [
             "title" => "required",
-            "synopsis" => "required",
+            // "synopsis" => "required",
             "category" => "required",
             "link" => "required",
             "img" => "required|mimes:png,jpg,jpeg",
@@ -102,14 +102,14 @@ class MangaController extends Controller
             'title' => $request->title,
             'synopsis' => $request->synopsis,
             'img' => $pathCover,
-            'link' => $request->link
+            'link' => $request->link,
         ]);
 
         foreach($request->category as $key => $categoryId){
             $manga->categories()->attach($categoryId);
         }
 
-        return redirect('/adminManga');
+        return redirect("/adminManga");
     }
 
     public function edit($id)
@@ -158,7 +158,7 @@ class MangaController extends Controller
             $manga->title = $request->title;
         }
 
-        if(!empty($request->content)){
+        if(!empty($request->synopsis)){
             $manga->synopsis = $request->synopsis;
         }
 

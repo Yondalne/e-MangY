@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="link">
-                    <a href="{{$manga->link}}" target="">Lire ici via ce super lien uwu</a>
+                    <a href="{{$manga->link}}" target="_blank">Lire ici via ce super lien uwu</a>
                 </div>
             </div>
         </div>

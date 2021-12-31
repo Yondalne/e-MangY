@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\contactMail;
+use App\Mail\Contact;
 use App\Models\Article;
 use App\Models\User;
-use GuzzleHttp\Psr7\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class Controller extends BaseController
@@ -105,8 +104,23 @@ class Controller extends BaseController
         ]);
     }
 
-    public function sendMail()
+    public function sendMail(Request $request)
     {
-        return redirect('/');
+        $this->validate($request, [
+            'sender' => 'required|email',
+            'text' => 'required',
+        ]);
+
+        // dd(auth()->user());
+
+        $data = [
+            'subject' => "contact admin",
+            'name' => "Members",
+            'email' => $request->sender,
+            'content' => $request->text
+        ];
+
+        Mail::to("yondaineman@gmail.com")->send(new Contact($data));
+        return back()->withErrors(["message" => "Your Mail has been sent ! Thanks you"]);
     }
 }

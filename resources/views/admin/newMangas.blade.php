@@ -1,6 +1,7 @@
 @extends('layout.user.layoutUserDashboard')
 
 @section('link')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('css/user_dashboard/newPost.css')}}">
 @endsection
 
@@ -19,7 +20,7 @@
         <div class="contentContent">
             <h1>Nouveau Manga</h1>
 
-            <form action="/createManga" method="POST" enctype="multipart/form-data">
+            <form action="/createManga" method="POST" enctype="multipart/form-data" id="formElt">
                 @csrf
                 @method("POST")
                 <div class="top">
@@ -36,17 +37,19 @@
 
                 <div class="categoriesOptions">
                     <h4>Attribuer une / des categories:</h4>
-                    @foreach ($categories as $category)
-                        <div class="categoryOption">
-                            <input id="{{$category->label}}" type="checkbox" name="category[]" value="{{$category->id}}">
-                            <label for="{{$category->label}}">{{$category->label}}</label>
-                        </div>
-                    @endforeach
+                    <div class="categoryOption">
+                        @foreach ($categories as $category)
+                            <div class="categoryOpt">
+                                <input id="{{$category->label}}" type="checkbox" name="category[]" value="{{$category->id}}">
+                                <label for="{{$category->label}}">{{$category->label}}</label>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
 
                 <div class="articleContent">
                     <label for="content">Synopsis</label>
-                    <textarea required name="synopsis" id="content" cols="30" rows="10"></textarea>
+                    <textarea required name="synopsis" id="content" placeholder="Ecrivez le Synopsis ici"></textarea>
                 </div>
 
                 <div class="title" style="width: 90%; justify-content: flex-start; margin-top:20px;">
@@ -63,10 +66,10 @@
     <script src="{{asset('js/jquery.js')}}"></script>
     <script>
         coverImg.onchange = evt => {
-            const [file] = coverImg.files
+            const [file] = coverImg.files;
             if (file) {
-                coverPreview.src = URL.createObjectURL(file)
-                $('#labelcover').text("Changer d'image")
+                coverPreview.src = URL.createObjectURL(file);
+                $('#labelcover').text("Changer d'image");
             }
         }
     </script>
